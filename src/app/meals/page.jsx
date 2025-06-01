@@ -11,7 +11,7 @@ const roboto=Roboto({
 
 const meastPage = async({searchParams}) => {
     const query=  searchParams;
-    console.log('query-> ',query);
+    // console.log('query-> ',query);
     
 
     const getMeals=async()=>{

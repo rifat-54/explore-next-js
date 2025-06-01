@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 
   export async function GET(req,{params}){
     const p=await params;
-    console.log(p);
+    // console.log(p);
     const result=await dbConnect('users').findOne({_id:new ObjectId(p.id)})
     return Response.json(result)
   }

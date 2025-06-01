@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} antialiased`}
       >
         <Navber></Navber>
-        <main className="h-screen  max-h-[500px]">
+        <main>
 
         {children}
         </main>
-        <footer className="bg-gray-500 text-center">
+        <footer className="bg-gray-500 mt-16 text-center">
           Awesome footer for next js
         </footer>
       </body>

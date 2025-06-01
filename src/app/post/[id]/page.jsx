@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 const singlePost = async ({ params }) => {
   const p = await params;
   const data = await getSinglePage(p.id);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>

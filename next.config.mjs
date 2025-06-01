@@ -10,6 +10,18 @@ const nextConfig = {
             },
           ],
         },
+
+        // async redirects() {
+        //   return [
+        //     // Basic redirect
+        //     {
+        //       source: '/products/add',
+        //       destination: '/dashboard/add',
+        //       permanent: true,
+        //     },
+            
+        //   ]
+        // },
       
 };
 
