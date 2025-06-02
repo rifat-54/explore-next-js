@@ -36,6 +36,9 @@ const Navber = () => {
         <Link href={"/products/add"}>
           <li>Add Products</li>
         </Link>
+        <Link href={"/register"}>
+          <li>Register</li>
+        </Link>
        
         
       </ul>
