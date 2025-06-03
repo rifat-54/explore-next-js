@@ -1,9 +1,10 @@
+import { authOption } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+
 
 export default async function Home() {
-  const session=await getServerSession(authOptions)
+  const session=await getServerSession(authOption)
   return (
     <div>
       <h1>hello world !</h1>

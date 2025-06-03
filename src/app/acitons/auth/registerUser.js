@@ -1,6 +1,6 @@
 'use server'
 
-import dbConnect from "@/lib/dbConnect";
+import dbConnect, { collectionName } from "@/lib/dbConnect";
 
 
 
@@ -8,7 +8,7 @@ const registerUser = async(data) => {
     
     console.log('data->',data);
     try {
-        const result=await dbConnect('test-user').insertOne(data)
+        const result=await dbConnect(collectionName.TEST_USER).insertOne(data)
         return {
             acknowledged: result.acknowledged,
             insertedId: result.insertedId.toString()
