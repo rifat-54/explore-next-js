@@ -8,7 +8,7 @@ export async function middleware(req) {
 
     const token=await getToken({req})
 
-    console.log(token);
+    // console.log(token);
     
         const isTokenOk=Boolean(token);
 
@@ -16,7 +16,8 @@ export async function middleware(req) {
     const isAdminSpesicRoutes=req.nextUrl.pathname.startsWith('/products/add')
 
     if(isAdminSpesicRoutes && !isAdminUser){
-        return NextResponse.redirect(new URL('/api/auth/signin',req.url))
+        const callbackUrl=encodeURIComponent(req.nextUrl.pathname)
+        return NextResponse.redirect(new URL(`/api/auth/signin?callbackUrl=${callbackUrl}`,req.url))
     }
 
     

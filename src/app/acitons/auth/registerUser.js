@@ -6,7 +6,7 @@ import dbConnect, { collectionName } from "@/lib/dbConnect";
 
 const registerUser = async(data) => {
     
-    console.log('data->',data);
+    // console.log('data->',data);
     try {
         const result=await dbConnect(collectionName.TEST_USER).insertOne(data)
         return {

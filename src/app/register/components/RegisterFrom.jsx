@@ -13,7 +13,7 @@ const RegisterFrom = () => {
         // console.log("Registration payload", payload);
      
         const result=await registerUser(payload)
-        console.log(result);
+        // console.log(result);
       };
       return (
         <>
